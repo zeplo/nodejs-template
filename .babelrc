@@ -1,0 +1,23 @@
+
+{
+  "plugins": [
+    "transform-flow-strip-types",
+    "babel-plugin-transform-class-properties",
+    "transform-object-rest-spread",
+    "transform-export-extensions",
+    ["babel-plugin-inline-import", {
+      "extensions": [
+        ".sql",
+        ".graphql",
+        ".rdf",
+      ]
+    }],
+    ["module-resolver", {
+      "root": ["./src"],
+      "alias": {
+        "test": "./test",
+      }
+    }]
+  ],
+  "presets": [["latest-node", { "target": "current" }]]
+}

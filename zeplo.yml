@@ -1,0 +1,9 @@
+specVersion: "1"
+build:
+  context: ./
+  builder: docker
+
+# env:
+#   - ELASTIC_ENDPOINT=localhost:9200
+#   - REDIS_HOST=localhost
+#   - REDIS_PORT=6379
