@@ -12,7 +12,7 @@
     "dotenv": "^6.2.0",
     "make-promises-safe": "^4.0.0",
     "pino": "^5.11.1",
-    "pino-pretty": "^2.5.0",
+    "pino-pretty": "^2.5.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -36,7 +36,7 @@
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.10.0",
-    "jest": "^23.4.1",
+    "jest": "^23.4.1"
   },
   "jest": {
     "testEnvironment": "node",
