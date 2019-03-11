@@ -37,5 +37,7 @@ RUN yarn install --ignore-scripts
 # Safe user
 USER node
 
+EXPOSE 3000
+
 # Serve, for a pure execution
 CMD node ./dist -s

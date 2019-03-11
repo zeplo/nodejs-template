@@ -1,0 +1,9 @@
+dist
+package-lock.json
+node_modules
+.idea
+.vscode
+*.log
+*secret.yaml
+*service-account.json
+secret.yml

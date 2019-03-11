@@ -1,4 +1,4 @@
-# Microservice Template
+# NodeJS Microservice Template
 
-A template for internal services built on Zeplo. Zeplo on Zeplo.
+A base template we use at Zeplo for internal services. Zeplo on Zeplo.
 

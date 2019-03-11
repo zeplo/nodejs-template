@@ -1,50 +1,46 @@
 {
-  "name": "nodejs-template",
+  "name": "zeplo-nodejs-template",
+  "version": "0.0.1",
+  "description": "A basic template for nodejs",
   "license": "MIT",
-  "main": "./dist/index.js",
   "scripts": {
     "start": "BABEL_DISABLE_CACHE=1 NODE_ENV=development LOG_LEVEL=debug babel-watch ./src",
     "build": "babel src --ignore .spec.js,__mocks__ -d dist",
     "test": "jest ./src"
   },
-  "private": true,
   "dependencies": {
-    "dotenv": "^6.2.0",
-    "make-promises-safe": "^4.0.0",
-    "pino": "^5.11.1",
-    "pino-pretty": "^2.5.0"
+    "dotenv": "^6.2.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-eslint": "^8.2.6",
-    "babel-jest": "^23.4.0",
-    "babel-plugin-import-graphql": "^2.6.2",
-    "babel-plugin-inline-import": "^3.0.0",
-    "babel-plugin-module-resolver": "^3.1.0",
-    "babel-plugin-transform-class-properties": "^6.24.1",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.1.0",
     "babel-plugin-transform-export-extensions": "^6.22.0",
-    "babel-plugin-transform-flow-strip-types": "^6.22.0",
-    "babel-plugin-transform-object-assign": "^6.22.0",
-    "babel-plugin-transform-object-rest-spread": "^6.23.0",
-    "babel-preset-flow": "^6.23.0",
-    "babel-preset-latest-node": "^1.0.0",
-    "babel-preset-node6": "^11.0.0",
-    "babel-watch": "^2.0.8",
+    "babel-watch": "^7.0.0",
+    "cross-env": "^5.1.4",
     "eslint": "^5.2.0",
     "eslint-config-airbnb": "^17.0.0",
-    "eslint-import-resolver-node": "^0.3.2",
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.10.0",
-    "jest": "^23.4.1"
+    "jest": "^24.1.0"
   },
   "jest": {
-    "testEnvironment": "node",
-    "verbose": true,
-    "testURL": "http://localhost",
-    "clearMocks": true,
+    "verbose": false,
+    "restoreMocks": true,
     "setupFiles": [
-      "./jest.setup.js"
+      "./jest-setup"
+    ],
+    "testEnvironment": "node",
+    "testMatch": [
+      "<rootDir>/**/*.e2e.js"
+    ],
+    "watchPathIgnorePatterns": [
+      "<rootDir>/tests/fixtures",
+      "<rootDir>/e2e/fixtures"
     ]
   }
 }
